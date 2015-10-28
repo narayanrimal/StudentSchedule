@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colors"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.king.EditUserActivity">
+
+    <TextView
+        android:id="@+id/editUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:text="@string/edit_user_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#7588ed"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/usernameEditUserText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/editUserText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/text_box2"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/username_text"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#FF7B797B"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/passwordEditUserText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/usernameEditUserText"
+        android:layout_alignRight="@+id/usernameEditUserText"
+        android:layout_below="@+id/usernameEditUserText"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/text_box2"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/password_text"
+        android:inputType="textPassword"
+        android:textColorHint="#FF7B797B"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/confirmPasswordEditUserText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/passwordEditUserText"
+        android:layout_alignRight="@+id/passwordEditUserText"
+        android:layout_below="@+id/passwordEditUserText"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/text_box2"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:textColorHint="#FF7B797B"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/emailEditUserText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignEnd="@+id/confirmPasswordEditUserText"
+        android:layout_alignLeft="@+id/confirmPasswordEditUserText"
+        android:layout_alignRight="@+id/confirmPasswordEditUserText"
+        android:layout_alignStart="@+id/confirmPasswordEditUserText"
+        android:layout_below="@+id/confirmPasswordEditUserText"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/text_box2"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Email Address"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#FF7B797B"
+        android:textIsSelectable="true"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/emailEditUserText"
+        android:layout_alignParentBottom="false"
+        android:layout_alignRight="@+id/emailEditUserText"
+        android:layout_below="@+id/emailEditUserText"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_grey"
+        android:onClick="UpdateUser"
+        android:text="@string/update_button_text" />
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/colors"
+    tools:context="com.king.SelectCourseActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/frameContainerColor"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/description_select_course"
+                android:hint="DESCRIPTION"
+                android:textColorHint="#ff959395"
+                android:gravity="center"
+                android:textSize="15sp" />
+
+            <AutoCompleteTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/year_select_course"
+                android:hint="YEAR"
+                android:layout_weight=".5"
+                android:inputType="text"
+                android:dropDownWidth="300dp"
+                android:dropDownHeight="wrap_content" />
+
+            <AutoCompleteTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/semester_select_course"
+                android:hint="SEMESTER"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:dropDownWidth="match_parent"
+                android:dropDownHorizontalOffset = "-200dp"
+                android:dropDownHeight="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <AutoCompleteTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/course_department_select_course"
+                android:hint="DEPT"
+                android:layout_weight=".5"
+                android:inputType="text"
+                android:dropDownWidth="300dp"
+                android:dropDownHeight="wrap_content" />
+
+            <AutoCompleteTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/course_number_select_course"
+                android:hint="COURSE NUMBER"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:dropDownWidth="match_parent"
+                android:dropDownHorizontalOffset = "-200dp"
+                android:dropDownHeight="wrap_content" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD COURSE"
+                android:id="@+id/add_course_select_course"
+                android:layout_weight="0"
+                android:onClick="addCourse"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/selected_courses_listview"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="GENERATE SCHEDULE"
+                android:id="@+id/generate_schedules_button"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:onClick="getCourseSections"
+                android:textColor="#000000"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="BLOCK-OUT TIME"
+                android:id="@+id/set_blockout_times_button"
+                android:layout_weight="1"
+                android:onClick="selectBlockoutTimes"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

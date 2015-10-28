@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dara.myapplication" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.king.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.king.RegisterUserActivity"
+            android:label="Register User" >
+        </activity>
+        <activity
+            android:name="com.king.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password" >
+        </activity>
+        <activity
+            android:name="com.king.MainMenuActivity"
+            android:label="@string/title_activity_forgot_password" >
+        </activity>
+        <activity
+            android:name="com.king.SelectCourseActivity"
+            android:label="@string/title_activity_select_course" >
+        </activity>
+        <activity
+            android:name="com.king.EditUserActivity"
+            android:label="@string/title_activity_edit_user" >
+        </activity>
+        <activity
+            android:name="com.king.UserMenuActivity"
+            android:label="@string/title_activity_user_menu" >
+        </activity>
+        <activity
+            android:name="com.king.CourseMenuActivity"
+            android:label="@string/title_activity_course_menu" >
+        </activity>
+        <activity
+            android:name="com.king.BlockOutTimeActivity"
+            android:label="@string/title_activity_course_menu" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/colors">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:editable="false"
+        android:layout_gravity="center_horizontal"
+        android:text="Main"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:layout_marginTop="0dp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course"
+        android:id="@+id/buttonCourse"
+        android:onClick="gotoCourseMenu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:gravity="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Block Out Time"
+        android:id="@+id/buttonBlockOut"
+        android:layout_gravity="center_horizontal"
+        android:onClick="gotBlockOut"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonCourse"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:gravity="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incorporate Time"
+        android:id="@+id/buttonIncorporateTime"
+        android:layout_gravity="center_horizontal"
+        android:onClick="viewSchedule"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonBlockOut"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:gravity="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule"
+        android:id="@+id/buttonSchedule"
+        android:layout_gravity="center_horizontal"
+        android:onClick="gotoSchedule"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonIncorporateTime"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:gravity="center" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:id="@+id/buttonUser"
+        android:layout_gravity="center_horizontal"
+        android:onClick="gotoUserMenu"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonSchedule"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_menu"
+        android:gravity="center" />
+</RelativeLayout>
