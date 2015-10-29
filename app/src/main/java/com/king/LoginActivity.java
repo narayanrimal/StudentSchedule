@@ -91,6 +91,9 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
                 Utils.getInstance().showMessage("Error", "Please enter all values", this);
                 return;
             }
+            //implement the password validation
+            //length of username
+            //email id
             Cursor c = userController.login(usernameText.getText().toString(), passwordText.getText().toString());
             if (c.getCount() == 0) {
                 Utils.getInstance().showMessage("Error", "Invalid User Name or Password!", this);
