@@ -55,9 +55,30 @@ public class RegisterUserActivity extends AppCompatActivity implements View.OnCl
                 Utils.getInstance().showMessage("Error", "Please enter all values",this);
                 return;
             }
-            if (!passwordText.getText().toString().equals(confirmPasswordText.getText().toString()))
+            if(usernameText.getText().toString().trim().length() < 4)
             {
-                Utils.getInstance().showMessage("Error", "Password does not match!",this);
+                Utils.getInstance().showMessage("Error", "Please enter valid username",this);
+                return;
+            }
+            if((passwordText.getText().toString().matches("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[~!@#$%^&*()_+])(?=\\S+$).{8,}"))==false){
+                Utils.getInstance().showMessage("Error", "Please enter valid password",this);
+                return;
+            }
+            if((emailText.getText().toString().matches("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"))==false) {
+                Utils.getInstance().showMessage("Error", "Please enter valid entries", this);
+                return;
+
+
+            }
+
+
+
+
+
+
+
+            if (!passwordText.getText().toString().equals(confirmPasswordText.getText().toString())) {
+                Utils.getInstance().showMessage("Error", "Password does not match!", this);
             }
             userTable.userName = usernameText.getText().toString();
             userTable.password = passwordText.getText().toString();
