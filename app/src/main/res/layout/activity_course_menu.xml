@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Add Course"
         android:id="@+id/buttonAddCourse"
-        android:onClick="gotoSelectCourse"
+        android:onClick="gotoSelectCourse (CourseMenuActivity)"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/editText3"
